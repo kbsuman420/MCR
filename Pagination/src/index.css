@@ -1,0 +1,40 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.products {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.pagination {
+    display: flex;
+    margin-bottom: 10px;
+}
+.page {
+    border: 1px solid black;
+    padding: 4px 2px;
+}
+.active {
+    background-color: aqua;
+}
+.decrement, .increment {
+    font-size: 30px;
+}
+.decrement:disabled, .increment:disabled {
+    opacity: 0.3;
+}
+
