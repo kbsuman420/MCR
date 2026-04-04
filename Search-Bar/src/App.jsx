@@ -30,8 +30,20 @@ export default function APP() {
     return () => clearTimeout(timer)
   }, [searchItem])
 
+  const handlerFocus = () => {
+    const timer = setTimeout(() => setIsFocus(true), 200);
+    
+    return () => {
+      clearTimeout(timer)
+    }
+  }
+  const handleBlur = () => {
+    const timer = setTimeout(() => setIsFocus(false), 200)
 
-
+    return () => {
+      clearTimeout(timer)
+    }
+  }
 
   return (
     <div className="container">
@@ -39,14 +51,15 @@ export default function APP() {
         <input type="text" className="input" 
         placeholder="Search your url" value={searchItem} 
         onChange={(e) => setSearchItem(e.target.value)} 
-        onFocus={() => setIsFocus((prev) => !prev)}
-        onBlur={() => setIsFocus((prev) => !prev)}
+        onFocus={handlerFocus}
+        onBlur={handleBlur}
         />
 
         {isFocus && <div className="search-hints">
           {recipes.map((recipe) => (
-            <p className="items" key={recipe.id} onMouseDown={() => 
+            <p className="items" key={recipe.id} onClick={() => {
               setSearchItem(recipe.name)
+            }
             }>{recipe.name}</p>
           ))}
         </div>}

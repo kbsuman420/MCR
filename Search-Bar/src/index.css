@@ -30,6 +30,10 @@
     font-size: 20px;
     
 }
+.items {
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
 .items:hover {
     background-color: gray;
 }

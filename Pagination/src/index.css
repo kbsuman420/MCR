@@ -13,26 +13,32 @@
 
 .products {
     height: 200px;
-    width: 200px;
+    width: 210px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     text-align: center;
-    
+    flex-grow: 1;
 }
 .pagination {
     display: flex;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 .page {
+    margin-top: 10px;
     border: 1px solid black;
-    padding: 4px 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    cursor: pointer;
 }
 .active {
     background-color: aqua;
 }
 .decrement, .increment {
     font-size: 30px;
+    cursor: pointer;
 }
 .decrement:disabled, .increment:disabled {
     opacity: 0.3;

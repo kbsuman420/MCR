@@ -35,16 +35,16 @@ export default function App() {
     <div className="main-container">
     <h1>Pagination of products</h1>
     <div className="pagination">
-    <button className="decrement" disabled={activePage === 0} onClick={handleDecrement}>⬅️</button>
+    <div className="decrement" disabled={activePage === 0} onClick={handleDecrement}>⬅️</div>
       {array.map((i) => (
-        <button className={"page " + ((activePage == i) ? "active" : "")} key={i} onClick={() => setActivePage(i)}>{i}</button>
+        <div className={"page " + ((activePage == i) ? "active" : "")} key={i} onClick={() => setActivePage(i)}>{i}</div>
       ))}
-      <button className="increment"  onClick={handleIncrement} disabled={activePage === noofpages - 1}>➡️</button>
+      <div className="increment"  onClick={handleIncrement} disabled={activePage === noofpages - 1}>➡️</div>
     </div>
       <div className="products-container">
         {products.slice(start, end).map((product) => (
           <div key={product.id} className="products">
-            <img src={product.thumbnail} alt={product.title} height="140px" width="200px"/>
+            <img src={product.thumbnail} alt={product.title} height="140px" width="250px"/>
             <p>{product.title}</p>
           </div>
         ))}
