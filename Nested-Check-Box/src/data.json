@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "name": "Parent 1",
+        "checked": false,
+        "children": [
+            {
+                "id": 2,
+                "name": "Parent 2",
+                "checked": false,
+                "children": [
+                    {
+                        "id": 3,
+                        "name": "Parent 3",
+                        "checked": false,
+                        "children": []
+                    },
+                    {
+                        "id": 4,
+                        "name": "Parent 4",
+                        "checked": false,
+                        "children": []
+                    },
+                    {
+                        "id": 5,
+                        "name": "Parent 5",
+                        "checked": false,
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Parent 6",
+        "checked": false,
+        "children": []
+    }
+]
